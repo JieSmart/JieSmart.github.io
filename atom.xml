@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://jiesmart.me</id>
     <title>Gridea</title>
-    <updated>2020-08-11T09:39:48.490Z</updated>
+    <updated>2020-08-11T09:40:39.788Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://jiesmart.me"/>
     <link rel="self" href="http://jiesmart.me/atom.xml"/>
@@ -10,6 +10,20 @@
     <logo>http://jiesmart.me/images/avatar.png</logo>
     <icon>http://jiesmart.me/favicon.ico</icon>
     <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[git 设置和取消代理]]></title>
+        <id>http://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/</id>
+        <link href="http://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/">
+        </link>
+        <updated>2020-08-11T09:40:11.000Z</updated>
+        <content type="html"><![CDATA[<pre><code class="language-shell">git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080 
+取消代理
+git config --global --unset http.proxy	
+git config --global --unset https.proxy
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[最全的 Android 颜色透明度]]></title>
         <id>http://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/</id>

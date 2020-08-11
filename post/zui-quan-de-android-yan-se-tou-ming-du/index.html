@@ -1,0 +1,633 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>最全的 Android 颜色透明度 | Gridea</title>
+<link rel="shortcut icon" href="http://jiesmart.me/favicon.ico?v=1597138776662">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="http://jiesmart.me/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="最全的 Android 颜色透明度 | Gridea - Atom Feed" href="http://jiesmart.me/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="原文地址 blog.csdn.net
+
+好记性不如烂笔头。生活中多做笔记，不仅可以方便自己，还可以方便他人。
+
+背景
+开发的都知道，UI 微调都是令人头痛的，尤其是颜色的微调。
+如果视觉稿直接给颜色值那倒没啥，可怕的是后面还有标了透明度，而..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="http://jiesmart.me">
+  <img class="avatar" src="http://jiesmart.me/images/avatar.png?v=1597138776662" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    x小站
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              最全的 Android 颜色透明度
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-08-11
+              </span>
+              <span>
+                4 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>原文地址 <a href="https://blog.csdn.net/hewuzhao/article/details/78821954">blog.csdn.net</a></p>
+<blockquote>
+<p>好记性不如烂笔头。生活中多做笔记，不仅可以方便自己，还可以方便他人。</p>
+</blockquote>
+<h2 id="背景">背景</h2>
+<p>开发的都知道，UI 微调都是令人头痛的，尤其是颜色的微调。</p>
+<p>如果视觉稿直接给颜色值那倒没啥，可怕的是后面还有标了透明度，而且视觉还原后发现颜色太透明了，要你透明度再调调，这才烦人。我总不能记住 100 个透明度的值吧。</p>
+<p>一次计算，无数次使用，这文章，稳了。</p>
+<h2 id="正文">正文</h2>
+<p>Android 中的颜色值一般格式是：#AARRGGBB。AA 就是透明度值（这里我只聊透明度）。</p>
+<h4 id="1-透明度的计算">1. 透明度的计算</h4>
+<p>透明度分为 256 个等级，即 <strong>0 - 256</strong>，<strong>0</strong> 就是透明，<strong>255</strong> 就是不透明</p>
+<hr>
+<p>透明度 <strong>（透明）0 –&gt; 255（不透明）</strong> 对应着 16 进制 <strong>（透明）00 –&gt; FF（不透明）</strong></p>
+<hr>
+<p>比如：50% 透明度</p>
+<p>50% 也就是 256 的一半即 128，因为是从 0 开始算的，所以是 <strong>127</strong>，转换成 16 进制就是 <strong>7F</strong></p>
+<hr>
+<h3 id="2-献上透明度表格">2. 献上透明度表格</h3>
+<p><strong>注意：我这里写的是透明度值，不是不透明度值，这是两个不同的概念，注意区分。</strong></p>
+<hr>
+<p>需要不透明度值的，可以自己算：透明度值 + 不透明度值 = 100%</p>
+<p>如果你的 UI 设计师给的视觉稿标注是：颜色 #FFFFFF，透明度 40% 。那你的计算方式应该是：</p>
+<ol>
+<li>将透明度转换成不透明度。不透明度为：60%</li>
+<li>不透明度乘以 255。 我们得到结果：153</li>
+<li>将计算结果转换成 16 进制。得到最终的不透明度：99</li>
+<li>将不透明度和颜色值拼接成 ARGB 格式。得到最终的颜色值： #99FFFFFF</li>
+</ol>
+<p>所以，你的 UI 设计师要的颜色是：#99FFFFFF</p>
+<hr>
+<p>下面是我表格里的透明度值的计算方式是：（A：透明度； H：16 进制）</p>
+<p><em><em>255</em>(100% - A%)</em>* 通过计算器转为 16 进制 <strong>H</strong></p>
+<p>(ps：因为计算结果取整数，所以可能会有一个进制位的误差，比如 50% 的透明度值，上面 “1. 透明度的计算” 中的计算是 127，16 进制为 7F，这里计算是 127.5，四舍五入为 128，16 进制为 80。所以，看到这里不用惊慌，7F 跟 80 肉眼看起来是差不多的，不用去计较)</p>
+<p>00 是完全透明 (百分百透明)，FF 就是完全<strong>不</strong>透明</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">透明度</th>
+<th style="text-align:left">16 进制表示</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">100 %</td>
+<td style="text-align:left">00</td>
+</tr>
+<tr>
+<td style="text-align:left">99   %</td>
+<td style="text-align:left">03</td>
+</tr>
+<tr>
+<td style="text-align:left">98   %</td>
+<td style="text-align:left">05</td>
+</tr>
+<tr>
+<td style="text-align:left">97   %</td>
+<td style="text-align:left">07</td>
+</tr>
+<tr>
+<td style="text-align:left">96   %</td>
+<td style="text-align:left">0A</td>
+</tr>
+<tr>
+<td style="text-align:left">95   %</td>
+<td style="text-align:left">0D</td>
+</tr>
+<tr>
+<td style="text-align:left">94   %</td>
+<td style="text-align:left">0F</td>
+</tr>
+<tr>
+<td style="text-align:left">93   %</td>
+<td style="text-align:left">12</td>
+</tr>
+<tr>
+<td style="text-align:left">92   %</td>
+<td style="text-align:left">14</td>
+</tr>
+<tr>
+<td style="text-align:left">91   %</td>
+<td style="text-align:left">17</td>
+</tr>
+<tr>
+<td style="text-align:left">90   %</td>
+<td style="text-align:left">1A</td>
+</tr>
+<tr>
+<td style="text-align:left">89   %</td>
+<td style="text-align:left">1C</td>
+</tr>
+<tr>
+<td style="text-align:left">88   %</td>
+<td style="text-align:left">1E</td>
+</tr>
+<tr>
+<td style="text-align:left">87   %</td>
+<td style="text-align:left">21</td>
+</tr>
+<tr>
+<td style="text-align:left">86   %</td>
+<td style="text-align:left">24</td>
+</tr>
+<tr>
+<td style="text-align:left">85   %</td>
+<td style="text-align:left">26</td>
+</tr>
+<tr>
+<td style="text-align:left">84   %</td>
+<td style="text-align:left">29</td>
+</tr>
+<tr>
+<td style="text-align:left">83   %</td>
+<td style="text-align:left">2B</td>
+</tr>
+<tr>
+<td style="text-align:left">82   %</td>
+<td style="text-align:left">2E</td>
+</tr>
+<tr>
+<td style="text-align:left">81   %</td>
+<td style="text-align:left">30</td>
+</tr>
+<tr>
+<td style="text-align:left">80   %</td>
+<td style="text-align:left">33</td>
+</tr>
+<tr>
+<td style="text-align:left">79   %</td>
+<td style="text-align:left">36</td>
+</tr>
+<tr>
+<td style="text-align:left">78   %</td>
+<td style="text-align:left">38</td>
+</tr>
+<tr>
+<td style="text-align:left">77   %</td>
+<td style="text-align:left">3B</td>
+</tr>
+<tr>
+<td style="text-align:left">76   %</td>
+<td style="text-align:left">3D</td>
+</tr>
+<tr>
+<td style="text-align:left">75   %</td>
+<td style="text-align:left">40</td>
+</tr>
+<tr>
+<td style="text-align:left">74   %</td>
+<td style="text-align:left">42</td>
+</tr>
+<tr>
+<td style="text-align:left">73   %</td>
+<td style="text-align:left">45</td>
+</tr>
+<tr>
+<td style="text-align:left">72   %</td>
+<td style="text-align:left">47</td>
+</tr>
+<tr>
+<td style="text-align:left">71   %</td>
+<td style="text-align:left">4A</td>
+</tr>
+<tr>
+<td style="text-align:left">70   %</td>
+<td style="text-align:left">4D</td>
+</tr>
+<tr>
+<td style="text-align:left">69   %</td>
+<td style="text-align:left">4F</td>
+</tr>
+<tr>
+<td style="text-align:left">68   %</td>
+<td style="text-align:left">52</td>
+</tr>
+<tr>
+<td style="text-align:left">67   %</td>
+<td style="text-align:left">54</td>
+</tr>
+<tr>
+<td style="text-align:left">66   %</td>
+<td style="text-align:left">57</td>
+</tr>
+<tr>
+<td style="text-align:left">65   %</td>
+<td style="text-align:left">59</td>
+</tr>
+<tr>
+<td style="text-align:left">64   %</td>
+<td style="text-align:left">5C</td>
+</tr>
+<tr>
+<td style="text-align:left">63   %</td>
+<td style="text-align:left">5E</td>
+</tr>
+<tr>
+<td style="text-align:left">62   %</td>
+<td style="text-align:left">61</td>
+</tr>
+<tr>
+<td style="text-align:left">61   %</td>
+<td style="text-align:left">63</td>
+</tr>
+<tr>
+<td style="text-align:left">60   %</td>
+<td style="text-align:left">66</td>
+</tr>
+<tr>
+<td style="text-align:left">59   %</td>
+<td style="text-align:left">69</td>
+</tr>
+<tr>
+<td style="text-align:left">58   %</td>
+<td style="text-align:left">6B</td>
+</tr>
+<tr>
+<td style="text-align:left">57   %</td>
+<td style="text-align:left">6E</td>
+</tr>
+<tr>
+<td style="text-align:left">56   %</td>
+<td style="text-align:left">70</td>
+</tr>
+<tr>
+<td style="text-align:left">55   %</td>
+<td style="text-align:left">73</td>
+</tr>
+<tr>
+<td style="text-align:left">54   %</td>
+<td style="text-align:left">75</td>
+</tr>
+<tr>
+<td style="text-align:left">53   %</td>
+<td style="text-align:left">78</td>
+</tr>
+<tr>
+<td style="text-align:left">52   %</td>
+<td style="text-align:left">7A</td>
+</tr>
+<tr>
+<td style="text-align:left">51   %</td>
+<td style="text-align:left">7D</td>
+</tr>
+<tr>
+<td style="text-align:left">50   %</td>
+<td style="text-align:left">80</td>
+</tr>
+<tr>
+<td style="text-align:left">49   %</td>
+<td style="text-align:left">82</td>
+</tr>
+<tr>
+<td style="text-align:left">48   %</td>
+<td style="text-align:left">85</td>
+</tr>
+<tr>
+<td style="text-align:left">47   %</td>
+<td style="text-align:left">87</td>
+</tr>
+<tr>
+<td style="text-align:left">46   %</td>
+<td style="text-align:left">8A</td>
+</tr>
+<tr>
+<td style="text-align:left">45   %</td>
+<td style="text-align:left">8C</td>
+</tr>
+<tr>
+<td style="text-align:left">44   %</td>
+<td style="text-align:left">8F</td>
+</tr>
+<tr>
+<td style="text-align:left">43   %</td>
+<td style="text-align:left">91</td>
+</tr>
+<tr>
+<td style="text-align:left">42   %</td>
+<td style="text-align:left">94</td>
+</tr>
+<tr>
+<td style="text-align:left">41   %</td>
+<td style="text-align:left">96</td>
+</tr>
+<tr>
+<td style="text-align:left">40   %</td>
+<td style="text-align:left">99</td>
+</tr>
+<tr>
+<td style="text-align:left">39   %</td>
+<td style="text-align:left">9C</td>
+</tr>
+<tr>
+<td style="text-align:left">38   %</td>
+<td style="text-align:left">9E</td>
+</tr>
+<tr>
+<td style="text-align:left">37   %</td>
+<td style="text-align:left">A1</td>
+</tr>
+<tr>
+<td style="text-align:left">36   %</td>
+<td style="text-align:left">A3</td>
+</tr>
+<tr>
+<td style="text-align:left">35   %</td>
+<td style="text-align:left">A6</td>
+</tr>
+<tr>
+<td style="text-align:left">34   %</td>
+<td style="text-align:left">A8</td>
+</tr>
+<tr>
+<td style="text-align:left">33   %</td>
+<td style="text-align:left">AB</td>
+</tr>
+<tr>
+<td style="text-align:left">32   %</td>
+<td style="text-align:left">AD</td>
+</tr>
+<tr>
+<td style="text-align:left">31   %</td>
+<td style="text-align:left">B0</td>
+</tr>
+<tr>
+<td style="text-align:left">30   %</td>
+<td style="text-align:left">B3</td>
+</tr>
+<tr>
+<td style="text-align:left">29   %</td>
+<td style="text-align:left">B5</td>
+</tr>
+<tr>
+<td style="text-align:left">28   %</td>
+<td style="text-align:left">B8</td>
+</tr>
+<tr>
+<td style="text-align:left">27   %</td>
+<td style="text-align:left">BA</td>
+</tr>
+<tr>
+<td style="text-align:left">26   %</td>
+<td style="text-align:left">BD</td>
+</tr>
+<tr>
+<td style="text-align:left">25   %</td>
+<td style="text-align:left">BF</td>
+</tr>
+<tr>
+<td style="text-align:left">24   %</td>
+<td style="text-align:left">C2</td>
+</tr>
+<tr>
+<td style="text-align:left">23   %</td>
+<td style="text-align:left">C4</td>
+</tr>
+<tr>
+<td style="text-align:left">22   %</td>
+<td style="text-align:left">C7</td>
+</tr>
+<tr>
+<td style="text-align:left">21   %</td>
+<td style="text-align:left">C9</td>
+</tr>
+<tr>
+<td style="text-align:left">20   %</td>
+<td style="text-align:left">CC</td>
+</tr>
+<tr>
+<td style="text-align:left">19   %</td>
+<td style="text-align:left">CF</td>
+</tr>
+<tr>
+<td style="text-align:left">18   %</td>
+<td style="text-align:left">D1</td>
+</tr>
+<tr>
+<td style="text-align:left">17   %</td>
+<td style="text-align:left">D4</td>
+</tr>
+<tr>
+<td style="text-align:left">16   %</td>
+<td style="text-align:left">D6</td>
+</tr>
+<tr>
+<td style="text-align:left">15   %</td>
+<td style="text-align:left">D9</td>
+</tr>
+<tr>
+<td style="text-align:left">14   %</td>
+<td style="text-align:left">DB</td>
+</tr>
+<tr>
+<td style="text-align:left">13   %</td>
+<td style="text-align:left">DE</td>
+</tr>
+<tr>
+<td style="text-align:left">12   %</td>
+<td style="text-align:left">E0</td>
+</tr>
+<tr>
+<td style="text-align:left">11   %</td>
+<td style="text-align:left">E3</td>
+</tr>
+<tr>
+<td style="text-align:left">10   %</td>
+<td style="text-align:left">E6</td>
+</tr>
+<tr>
+<td style="text-align:left">9   %</td>
+<td style="text-align:left">E8</td>
+</tr>
+<tr>
+<td style="text-align:left">8   %</td>
+<td style="text-align:left">EB</td>
+</tr>
+<tr>
+<td style="text-align:left">7   %</td>
+<td style="text-align:left">ED</td>
+</tr>
+<tr>
+<td style="text-align:left">6   %</td>
+<td style="text-align:left">F0</td>
+</tr>
+<tr>
+<td style="text-align:left">5   %</td>
+<td style="text-align:left">F2</td>
+</tr>
+<tr>
+<td style="text-align:left">4   %</td>
+<td style="text-align:left">F5</td>
+</tr>
+<tr>
+<td style="text-align:left">3   %</td>
+<td style="text-align:left">F7</td>
+</tr>
+<tr>
+<td style="text-align:left">2   %</td>
+<td style="text-align:left">FA</td>
+</tr>
+<tr>
+<td style="text-align:left">1   %</td>
+<td style="text-align:left">FC</td>
+</tr>
+<tr>
+<td style="text-align:left">0   %</td>
+<td style="text-align:left">FF</td>
+</tr>
+</tbody>
+</table>
+<h2 id="结尾">结尾</h2>
+<p>东西虽然简单，但还是写出来，就当工具用，下次调 UI 就可以来这里看。如果上面有写错了，欢迎来 “搞”！哈哈！</p>
+<h5 id="参考文章">参考文章</h5>
+<p>本文参考了这位同学的文章<br>
+<a href="http://blog.csdn.net/jabony/article/details/52804296">http://blog.csdn.net/jabony/article/details/52804296</a></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%83%8C%E6%99%AF">背景</a></li>
+<li><a href="#%E6%AD%A3%E6%96%87">正文</a><br>
+*
+<ul>
+<li><a href="#1-%E9%80%8F%E6%98%8E%E5%BA%A6%E7%9A%84%E8%AE%A1%E7%AE%97">1. 透明度的计算</a></li>
+<li><a href="#2-%E7%8C%AE%E4%B8%8A%E9%80%8F%E6%98%8E%E5%BA%A6%E8%A1%A8%E6%A0%BC">2. 献上透明度表格</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%93%E5%B0%BE">结尾</a><br>
+*<br>
+*<br>
+* <a href="#%E5%8F%82%E8%80%83%E6%96%87%E7%AB%A0">参考文章</a></li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+
+        
+
+        <div class="site-footer">
+  
+  <a class="rss" href="http://jiesmart.me/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

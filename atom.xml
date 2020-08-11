@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://jiesmart.me</id>
     <title>Gridea</title>
-    <updated>2020-08-11T09:40:39.788Z</updated>
+    <updated>2020-08-11T09:42:56.691Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://jiesmart.me"/>
     <link rel="self" href="http://jiesmart.me/atom.xml"/>
@@ -30,7 +30,7 @@ git config --global --unset https.proxy
         <link href="http://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/">
         </link>
         <updated>2020-08-11T09:38:14.000Z</updated>
-        <content type="html"><![CDATA[<p>原文地址 <a href="https://blog.csdn.net/hewuzhao/article/details/78821954">blog.csdn.net</a></p>
+        <content type="html"><![CDATA[<p>原文地址 <a href="https://blog.csdn.net/hewuzhao/article/details/78821954">最全的 Android 颜色透明度</a></p>
 <blockquote>
 <p>好记性不如烂笔头。生活中多做笔记，不仅可以方便自己，还可以方便他人。</p>
 </blockquote>
@@ -74,407 +74,407 @@ git config --global --unset https.proxy
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">100 %</td>
+<td style="text-align:left">100%</td>
 <td style="text-align:left">00</td>
 </tr>
 <tr>
-<td style="text-align:left">99   %</td>
+<td style="text-align:left">99 %</td>
 <td style="text-align:left">03</td>
 </tr>
 <tr>
-<td style="text-align:left">98   %</td>
+<td style="text-align:left">98 %</td>
 <td style="text-align:left">05</td>
 </tr>
 <tr>
-<td style="text-align:left">97   %</td>
+<td style="text-align:left">97 %</td>
 <td style="text-align:left">07</td>
 </tr>
 <tr>
-<td style="text-align:left">96   %</td>
+<td style="text-align:left">96 %</td>
 <td style="text-align:left">0A</td>
 </tr>
 <tr>
-<td style="text-align:left">95   %</td>
+<td style="text-align:left">95 %</td>
 <td style="text-align:left">0D</td>
 </tr>
 <tr>
-<td style="text-align:left">94   %</td>
+<td style="text-align:left">94 %</td>
 <td style="text-align:left">0F</td>
 </tr>
 <tr>
-<td style="text-align:left">93   %</td>
+<td style="text-align:left">93 %</td>
 <td style="text-align:left">12</td>
 </tr>
 <tr>
-<td style="text-align:left">92   %</td>
+<td style="text-align:left">92 %</td>
 <td style="text-align:left">14</td>
 </tr>
 <tr>
-<td style="text-align:left">91   %</td>
+<td style="text-align:left">91 %</td>
 <td style="text-align:left">17</td>
 </tr>
 <tr>
-<td style="text-align:left">90   %</td>
+<td style="text-align:left">90 %</td>
 <td style="text-align:left">1A</td>
 </tr>
 <tr>
-<td style="text-align:left">89   %</td>
+<td style="text-align:left">89 %</td>
 <td style="text-align:left">1C</td>
 </tr>
 <tr>
-<td style="text-align:left">88   %</td>
+<td style="text-align:left">88 %</td>
 <td style="text-align:left">1E</td>
 </tr>
 <tr>
-<td style="text-align:left">87   %</td>
+<td style="text-align:left">87 %</td>
 <td style="text-align:left">21</td>
 </tr>
 <tr>
-<td style="text-align:left">86   %</td>
+<td style="text-align:left">86 %</td>
 <td style="text-align:left">24</td>
 </tr>
 <tr>
-<td style="text-align:left">85   %</td>
+<td style="text-align:left">85 %</td>
 <td style="text-align:left">26</td>
 </tr>
 <tr>
-<td style="text-align:left">84   %</td>
+<td style="text-align:left">84 %</td>
 <td style="text-align:left">29</td>
 </tr>
 <tr>
-<td style="text-align:left">83   %</td>
+<td style="text-align:left">83 %</td>
 <td style="text-align:left">2B</td>
 </tr>
 <tr>
-<td style="text-align:left">82   %</td>
+<td style="text-align:left">82 %</td>
 <td style="text-align:left">2E</td>
 </tr>
 <tr>
-<td style="text-align:left">81   %</td>
+<td style="text-align:left">81 %</td>
 <td style="text-align:left">30</td>
 </tr>
 <tr>
-<td style="text-align:left">80   %</td>
+<td style="text-align:left">80 %</td>
 <td style="text-align:left">33</td>
 </tr>
 <tr>
-<td style="text-align:left">79   %</td>
+<td style="text-align:left">79 %</td>
 <td style="text-align:left">36</td>
 </tr>
 <tr>
-<td style="text-align:left">78   %</td>
+<td style="text-align:left">78 %</td>
 <td style="text-align:left">38</td>
 </tr>
 <tr>
-<td style="text-align:left">77   %</td>
+<td style="text-align:left">77 %</td>
 <td style="text-align:left">3B</td>
 </tr>
 <tr>
-<td style="text-align:left">76   %</td>
+<td style="text-align:left">76 %</td>
 <td style="text-align:left">3D</td>
 </tr>
 <tr>
-<td style="text-align:left">75   %</td>
+<td style="text-align:left">75 %</td>
 <td style="text-align:left">40</td>
 </tr>
 <tr>
-<td style="text-align:left">74   %</td>
+<td style="text-align:left">74 %</td>
 <td style="text-align:left">42</td>
 </tr>
 <tr>
-<td style="text-align:left">73   %</td>
+<td style="text-align:left">73 %</td>
 <td style="text-align:left">45</td>
 </tr>
 <tr>
-<td style="text-align:left">72   %</td>
+<td style="text-align:left">72 %</td>
 <td style="text-align:left">47</td>
 </tr>
 <tr>
-<td style="text-align:left">71   %</td>
+<td style="text-align:left">71 %</td>
 <td style="text-align:left">4A</td>
 </tr>
 <tr>
-<td style="text-align:left">70   %</td>
+<td style="text-align:left">70 %</td>
 <td style="text-align:left">4D</td>
 </tr>
 <tr>
-<td style="text-align:left">69   %</td>
+<td style="text-align:left">69 %</td>
 <td style="text-align:left">4F</td>
 </tr>
 <tr>
-<td style="text-align:left">68   %</td>
+<td style="text-align:left">68 %</td>
 <td style="text-align:left">52</td>
 </tr>
 <tr>
-<td style="text-align:left">67   %</td>
+<td style="text-align:left">67 %</td>
 <td style="text-align:left">54</td>
 </tr>
 <tr>
-<td style="text-align:left">66   %</td>
+<td style="text-align:left">66 %</td>
 <td style="text-align:left">57</td>
 </tr>
 <tr>
-<td style="text-align:left">65   %</td>
+<td style="text-align:left">65 %</td>
 <td style="text-align:left">59</td>
 </tr>
 <tr>
-<td style="text-align:left">64   %</td>
+<td style="text-align:left">64 %</td>
 <td style="text-align:left">5C</td>
 </tr>
 <tr>
-<td style="text-align:left">63   %</td>
+<td style="text-align:left">63 %</td>
 <td style="text-align:left">5E</td>
 </tr>
 <tr>
-<td style="text-align:left">62   %</td>
+<td style="text-align:left">62 %</td>
 <td style="text-align:left">61</td>
 </tr>
 <tr>
-<td style="text-align:left">61   %</td>
+<td style="text-align:left">61 %</td>
 <td style="text-align:left">63</td>
 </tr>
 <tr>
-<td style="text-align:left">60   %</td>
+<td style="text-align:left">60 %</td>
 <td style="text-align:left">66</td>
 </tr>
 <tr>
-<td style="text-align:left">59   %</td>
+<td style="text-align:left">59 %</td>
 <td style="text-align:left">69</td>
 </tr>
 <tr>
-<td style="text-align:left">58   %</td>
+<td style="text-align:left">58 %</td>
 <td style="text-align:left">6B</td>
 </tr>
 <tr>
-<td style="text-align:left">57   %</td>
+<td style="text-align:left">57 %</td>
 <td style="text-align:left">6E</td>
 </tr>
 <tr>
-<td style="text-align:left">56   %</td>
+<td style="text-align:left">56 %</td>
 <td style="text-align:left">70</td>
 </tr>
 <tr>
-<td style="text-align:left">55   %</td>
+<td style="text-align:left">55 %</td>
 <td style="text-align:left">73</td>
 </tr>
 <tr>
-<td style="text-align:left">54   %</td>
+<td style="text-align:left">54 %</td>
 <td style="text-align:left">75</td>
 </tr>
 <tr>
-<td style="text-align:left">53   %</td>
+<td style="text-align:left">53 %</td>
 <td style="text-align:left">78</td>
 </tr>
 <tr>
-<td style="text-align:left">52   %</td>
+<td style="text-align:left">52 %</td>
 <td style="text-align:left">7A</td>
 </tr>
 <tr>
-<td style="text-align:left">51   %</td>
+<td style="text-align:left">51 %</td>
 <td style="text-align:left">7D</td>
 </tr>
 <tr>
-<td style="text-align:left">50   %</td>
+<td style="text-align:left">50 %</td>
 <td style="text-align:left">80</td>
 </tr>
 <tr>
-<td style="text-align:left">49   %</td>
+<td style="text-align:left">49 %</td>
 <td style="text-align:left">82</td>
 </tr>
 <tr>
-<td style="text-align:left">48   %</td>
+<td style="text-align:left">48 %</td>
 <td style="text-align:left">85</td>
 </tr>
 <tr>
-<td style="text-align:left">47   %</td>
+<td style="text-align:left">47 %</td>
 <td style="text-align:left">87</td>
 </tr>
 <tr>
-<td style="text-align:left">46   %</td>
+<td style="text-align:left">46 %</td>
 <td style="text-align:left">8A</td>
 </tr>
 <tr>
-<td style="text-align:left">45   %</td>
+<td style="text-align:left">45 %</td>
 <td style="text-align:left">8C</td>
 </tr>
 <tr>
-<td style="text-align:left">44   %</td>
+<td style="text-align:left">44 %</td>
 <td style="text-align:left">8F</td>
 </tr>
 <tr>
-<td style="text-align:left">43   %</td>
+<td style="text-align:left">43 %</td>
 <td style="text-align:left">91</td>
 </tr>
 <tr>
-<td style="text-align:left">42   %</td>
+<td style="text-align:left">42 %</td>
 <td style="text-align:left">94</td>
 </tr>
 <tr>
-<td style="text-align:left">41   %</td>
+<td style="text-align:left">41 %</td>
 <td style="text-align:left">96</td>
 </tr>
 <tr>
-<td style="text-align:left">40   %</td>
+<td style="text-align:left">40 %</td>
 <td style="text-align:left">99</td>
 </tr>
 <tr>
-<td style="text-align:left">39   %</td>
+<td style="text-align:left">39 %</td>
 <td style="text-align:left">9C</td>
 </tr>
 <tr>
-<td style="text-align:left">38   %</td>
+<td style="text-align:left">38 %</td>
 <td style="text-align:left">9E</td>
 </tr>
 <tr>
-<td style="text-align:left">37   %</td>
+<td style="text-align:left">37 %</td>
 <td style="text-align:left">A1</td>
 </tr>
 <tr>
-<td style="text-align:left">36   %</td>
+<td style="text-align:left">36 %</td>
 <td style="text-align:left">A3</td>
 </tr>
 <tr>
-<td style="text-align:left">35   %</td>
+<td style="text-align:left">35 %</td>
 <td style="text-align:left">A6</td>
 </tr>
 <tr>
-<td style="text-align:left">34   %</td>
+<td style="text-align:left">34 %</td>
 <td style="text-align:left">A8</td>
 </tr>
 <tr>
-<td style="text-align:left">33   %</td>
+<td style="text-align:left">33 %</td>
 <td style="text-align:left">AB</td>
 </tr>
 <tr>
-<td style="text-align:left">32   %</td>
+<td style="text-align:left">32 %</td>
 <td style="text-align:left">AD</td>
 </tr>
 <tr>
-<td style="text-align:left">31   %</td>
+<td style="text-align:left">31 %</td>
 <td style="text-align:left">B0</td>
 </tr>
 <tr>
-<td style="text-align:left">30   %</td>
+<td style="text-align:left">30 %</td>
 <td style="text-align:left">B3</td>
 </tr>
 <tr>
-<td style="text-align:left">29   %</td>
+<td style="text-align:left">29 %</td>
 <td style="text-align:left">B5</td>
 </tr>
 <tr>
-<td style="text-align:left">28   %</td>
+<td style="text-align:left">28 %</td>
 <td style="text-align:left">B8</td>
 </tr>
 <tr>
-<td style="text-align:left">27   %</td>
+<td style="text-align:left">27 %</td>
 <td style="text-align:left">BA</td>
 </tr>
 <tr>
-<td style="text-align:left">26   %</td>
+<td style="text-align:left">26 %</td>
 <td style="text-align:left">BD</td>
 </tr>
 <tr>
-<td style="text-align:left">25   %</td>
+<td style="text-align:left">25 %</td>
 <td style="text-align:left">BF</td>
 </tr>
 <tr>
-<td style="text-align:left">24   %</td>
+<td style="text-align:left">24 %</td>
 <td style="text-align:left">C2</td>
 </tr>
 <tr>
-<td style="text-align:left">23   %</td>
+<td style="text-align:left">23 %</td>
 <td style="text-align:left">C4</td>
 </tr>
 <tr>
-<td style="text-align:left">22   %</td>
+<td style="text-align:left">22 %</td>
 <td style="text-align:left">C7</td>
 </tr>
 <tr>
-<td style="text-align:left">21   %</td>
+<td style="text-align:left">21 %</td>
 <td style="text-align:left">C9</td>
 </tr>
 <tr>
-<td style="text-align:left">20   %</td>
+<td style="text-align:left">20 %</td>
 <td style="text-align:left">CC</td>
 </tr>
 <tr>
-<td style="text-align:left">19   %</td>
+<td style="text-align:left">19 %</td>
 <td style="text-align:left">CF</td>
 </tr>
 <tr>
-<td style="text-align:left">18   %</td>
+<td style="text-align:left">18 %</td>
 <td style="text-align:left">D1</td>
 </tr>
 <tr>
-<td style="text-align:left">17   %</td>
+<td style="text-align:left">17 %</td>
 <td style="text-align:left">D4</td>
 </tr>
 <tr>
-<td style="text-align:left">16   %</td>
+<td style="text-align:left">16 %</td>
 <td style="text-align:left">D6</td>
 </tr>
 <tr>
-<td style="text-align:left">15   %</td>
+<td style="text-align:left">15 %</td>
 <td style="text-align:left">D9</td>
 </tr>
 <tr>
-<td style="text-align:left">14   %</td>
+<td style="text-align:left">14 %</td>
 <td style="text-align:left">DB</td>
 </tr>
 <tr>
-<td style="text-align:left">13   %</td>
+<td style="text-align:left">13 %</td>
 <td style="text-align:left">DE</td>
 </tr>
 <tr>
-<td style="text-align:left">12   %</td>
+<td style="text-align:left">12 %</td>
 <td style="text-align:left">E0</td>
 </tr>
 <tr>
-<td style="text-align:left">11   %</td>
+<td style="text-align:left">11 %</td>
 <td style="text-align:left">E3</td>
 </tr>
 <tr>
-<td style="text-align:left">10   %</td>
+<td style="text-align:left">10 %</td>
 <td style="text-align:left">E6</td>
 </tr>
 <tr>
-<td style="text-align:left">9   %</td>
+<td style="text-align:left">9%</td>
 <td style="text-align:left">E8</td>
 </tr>
 <tr>
-<td style="text-align:left">8   %</td>
+<td style="text-align:left">8%</td>
 <td style="text-align:left">EB</td>
 </tr>
 <tr>
-<td style="text-align:left">7   %</td>
+<td style="text-align:left">7%</td>
 <td style="text-align:left">ED</td>
 </tr>
 <tr>
-<td style="text-align:left">6   %</td>
+<td style="text-align:left">6%</td>
 <td style="text-align:left">F0</td>
 </tr>
 <tr>
-<td style="text-align:left">5   %</td>
+<td style="text-align:left">5%</td>
 <td style="text-align:left">F2</td>
 </tr>
 <tr>
-<td style="text-align:left">4   %</td>
+<td style="text-align:left">4%</td>
 <td style="text-align:left">F5</td>
 </tr>
 <tr>
-<td style="text-align:left">3   %</td>
+<td style="text-align:left">3%</td>
 <td style="text-align:left">F7</td>
 </tr>
 <tr>
-<td style="text-align:left">2   %</td>
+<td style="text-align:left">2%</td>
 <td style="text-align:left">FA</td>
 </tr>
 <tr>
-<td style="text-align:left">1   %</td>
+<td style="text-align:left">1%</td>
 <td style="text-align:left">FC</td>
 </tr>
 <tr>
-<td style="text-align:left">0   %</td>
+<td style="text-align:left">0%</td>
 <td style="text-align:left">FF</td>
 </tr>
 </tbody>

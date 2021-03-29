@@ -2,18 +2,95 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>http://jiesmart.me</id>
     <title>JieSmart</title>
-    <updated>2020-08-11T12:10:57.266Z</updated>
+    <updated>2021-03-29T03:15:03.190Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="http://jiesmart.me"/>
     <link rel="self" href="http://jiesmart.me/atom.xml"/>
     <subtitle>JieSmart小站</subtitle>
     <logo>http://jiesmart.me/images/avatar.png</logo>
     <icon>http://jiesmart.me/favicon.ico</icon>
-    <rights>All rights reserved 2020, JieSmart</rights>
+    <rights>All rights reserved 2021, JieSmart</rights>
+    <entry>
+        <title type="html"><![CDATA[宝塔面板强制绑定手机号码解决办法]]></title>
+        <id>http://jiesmart.me/bao-ta-mian-ban-qiang-zhi-bang-ding-shou-ji-hao-ma-jie-jue-ban-fa/</id>
+        <link href="http://jiesmart.me/bao-ta-mian-ban-qiang-zhi-bang-ding-shou-ji-hao-ma-jie-jue-ban-fa/">
+        </link>
+        <updated>2021-01-31T05:04:00.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="解决方法一">解决方法一：</h3>
+<h5 id="1ssh工具登录上服务器">1.SSH工具登录上服务器</h5>
+<h5 id="2编辑宝塔面板登录的js文件">2.编辑宝塔面板登录的js文件</h5>
+<pre><code>vi /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<h5 id="3按一下-查找下面需要删除的js代码">3.按一下 / 查找下面需要删除的js代码</h5>
+<pre><code class="language-javascript">if (bind_user == 'True') {
+  show_force_bind();
+} 
+</code></pre>
+<h5 id="4删除这段代码按一下-esc键-wq-保存并退出">4.删除这段代码，按一下 ESC键 :wq 保存并退出</h5>
+<h5 id="5清除浏览器缓存重新登录下登录宝塔弹窗就没有了">5.清除浏览器缓存，重新登录下登录宝塔，弹窗就没有了</h5>
+<h3 id="解决方法二">解决方法二：</h3>
+<h5 id="直接在后面链接加上-ftp-就可去ftp管理只是首页有绑定">直接在后面链接加上 /ftp 就可去FTP管理，只是首页有绑定</h5>
+<pre><code>/site				网站管理
+/ftp				Ftp管理
+/database			数据库
+/control			系统监控
+/firewall			系统安全
+/files				文件
+/xterm				终端
+/crontab			计划任务
+/soft				软件商店
+/config   			面板设置
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[flutter 状态栏颜色问题]]></title>
+        <id>http://jiesmart.me/flutter-zhuang-tai-lan-yan-se-wen-ti/</id>
+        <link href="http://jiesmart.me/flutter-zhuang-tai-lan-yan-se-wen-ti/">
+        </link>
+        <updated>2021-01-16T06:29:00.000Z</updated>
+        <content type="html"><![CDATA[<p>第一种方法 通过AppBar</p>
+<pre><code class="language-dart">AppBar( 
+  brightness: Brightness.light, 
+  xxxx
+)
+</code></pre>
+<p>第二种方法 通过AnnotatedRegion组件</p>
+<pre><code class="language-dart">AnnotatedRegion&lt;SystemUiOverlayStyle&gt;(
+  value: SystemUiOverlayStyle.dark,
+  child:Container(),
+);
+</code></pre>
+<p>第三种 直接调用</p>
+<pre><code class="language-dart">//有白色和黑色主题
+SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[element ui的表格列设置fixed后做动态表格出现表格错乱]]></title>
+        <id>http://jiesmart.me/element-ui-de-biao-ge-lie-she-zhi-fixed-hou-zuo-dong-tai-biao-ge-chu-xian-biao-ge-cuo-luan/</id>
+        <link href="http://jiesmart.me/element-ui-de-biao-ge-lie-she-zhi-fixed-hou-zuo-dong-tai-biao-ge-chu-xian-biao-ge-cuo-luan/">
+        </link>
+        <updated>2021-01-04T01:34:00.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>最近使用element-UI时，使用table做动态表格，当操作列使用fixed时，动态切换表格列设置设置时就会出现错乱，情况如下</p>
+</blockquote>
+<img src="attachment:55d3416cc31de2604dbfc6c0ba063dd0" alt="截图" style="zoom:50%;" />
+<p><em><strong>解决方法：</strong></em></p>
+<p>为<code>el-table</code> 加 <code>ref=&quot;xTable&quot;</code></p>
+<pre><code class="language-javascript">//this.tableData = data.tableData;
+this.$nextTick(() =&gt; {
+	console.log(this.$refs.xTable)
+	this.$refs.xTable.doLayout();
+});
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TextView设置超链接自定义点击事件]]></title>
-        <id>http://jiesmart.me/post/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/</id>
-        <link href="http://jiesmart.me/post/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/">
+        <id>http://jiesmart.me/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/</id>
+        <link href="http://jiesmart.me/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/">
         </link>
         <updated>2020-08-11T12:05:08.000Z</updated>
         <content type="html"><![CDATA[<blockquote>
@@ -52,8 +129,8 @@ protected void setTextViewHTML(TextView text, String html)
     </entry>
     <entry>
         <title type="html"><![CDATA[git 设置和取消代理]]></title>
-        <id>http://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/</id>
-        <link href="http://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/">
+        <id>http://jiesmart.me/git-she-zhi-he-qu-xiao-dai-li/</id>
+        <link href="http://jiesmart.me/git-she-zhi-he-qu-xiao-dai-li/">
         </link>
         <updated>2020-08-11T09:40:11.000Z</updated>
         <content type="html"><![CDATA[<pre><code class="language-shell">git config --global http.proxy http://127.0.0.1:1080
@@ -66,8 +143,8 @@ git config --global --unset https.proxy
     </entry>
     <entry>
         <title type="html"><![CDATA[最全的 Android 颜色透明度]]></title>
-        <id>http://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/</id>
-        <link href="http://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/">
+        <id>http://jiesmart.me/zui-quan-de-android-yan-se-tou-ming-du/</id>
+        <link href="http://jiesmart.me/zui-quan-de-android-yan-se-tou-ming-du/">
         </link>
         <updated>2020-08-11T09:38:14.000Z</updated>
         <content type="html"><![CDATA[<p>原文地址 <a href="https://blog.csdn.net/hewuzhao/article/details/78821954">最全的 Android 颜色透明度</a></p>

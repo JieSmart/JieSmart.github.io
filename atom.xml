@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://jiesmart.me</id>
+    <title>JieSmart</title>
+    <updated>2024-09-18T03:39:37.626Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://jiesmart.me"/>
+    <link rel="self" href="https://jiesmart.me/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://jiesmart.me/images/avatar.png</logo>
+    <icon>https://jiesmart.me/favicon.ico</icon>
+    <rights>All rights reserved 2024, JieSmart</rights>
+    <entry>
+        <title type="html"><![CDATA[宝塔面板强制绑定手机号码解决办法]]></title>
+        <id>https://jiesmart.me/post/bao-ta-mian-ban-qiang-zhi-bang-ding-shou-ji-hao-ma-jie-jue-ban-fa/</id>
+        <link href="https://jiesmart.me/post/bao-ta-mian-ban-qiang-zhi-bang-ding-shou-ji-hao-ma-jie-jue-ban-fa/">
+        </link>
+        <updated>2021-01-31T02:12:06.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="解决方法一">解决方法一：</h3>
+<h5 id="1ssh-工具登录上服务器">1.SSH 工具登录上服务器</h5>
+<h5 id="2-编辑宝塔面板登录的-js-文件">2. 编辑宝塔面板登录的 js 文件</h5>
+<pre><code>vi /www/server/panel/BTPanel/static/js/index.js
+</code></pre>
+<h5 id="3-按一下-查找下面需要删除的-js-代码">3. 按一下 / 查找下面需要删除的 js 代码</h5>
+<pre><code>if (bind_user == 'True') {
+  show_force_bind();
+} 
+</code></pre>
+<h5 id="4-删除这段代码按一下-esc-键-wq-保存并退出">4. 删除这段代码，按一下 ESC 键 :wq 保存并退出</h5>
+<h5 id="5-清除浏览器缓存重新登录下登录宝塔弹窗就没有了">5. 清除浏览器缓存，重新登录下登录宝塔，弹窗就没有了</h5>
+<h3 id="解决方法二">解决方法二：</h3>
+<h5 id="直接在后面链接加上-ftp-就可去-ftp-管理只是首页有绑定">直接在后面链接加上 /ftp 就可去 FTP 管理，只是首页有绑定</h5>
+<pre><code>/site				网站管理
+/ftp				Ftp管理
+/database			数据库
+/control			系统监控
+/firewall			系统安全
+/files				文件
+/xterm				终端
+/crontab			计划任务
+/soft				软件商店
+/config   			面板设置
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[flutter 状态栏颜色问题]]></title>
+        <id>https://jiesmart.me/post/flutter-zhuang-tai-lan-yan-se-wen-ti/</id>
+        <link href="https://jiesmart.me/post/flutter-zhuang-tai-lan-yan-se-wen-ti/">
+        </link>
+        <updated>2021-01-16T07:21:31.000Z</updated>
+        <content type="html"><![CDATA[<p>第一种方法 通过 AppBar</p>
+<pre><code>AppBar( 
+  brightness: Brightness.light, 
+  xxxx
+)
+</code></pre>
+<p>第二种方法 通过 AnnotatedRegion 组件</p>
+<pre><code>AnnotatedRegion&lt;SystemUiOverlayStyle&gt;(
+  value: SystemUiOverlayStyle.dark,
+  child:Container(),
+);
+</code></pre>
+<p>第三种 直接调用</p>
+<pre><code>//有白色和黑色主题
+SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[TextView 设置超链接自定义点击事件]]></title>
+        <id>https://jiesmart.me/post/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/</id>
+        <link href="https://jiesmart.me/post/textview-she-zhi-chao-lian-jie-zi-ding-yi-dian-ji-shi-jian/">
+        </link>
+        <updated>2020-09-14T06:25:52.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>普通的<code>Html.formHtml()</code>能应付一般的 <code>a</code> 标签点击，但是想做自定义点击操作的话就得做一些其他处理</p>
+</blockquote>
+<pre><code>protected void makeLinkClickable(SpannableStringBuilder strBuilder, final URLSpan span) {
+    int start = strBuilder.getSpanStart(span);
+    int end = strBuilder.getSpanEnd(span);
+    int flags = strBuilder.getSpanFlags(span);
+    ClickableSpan clickable = new ClickableSpan() {
+        public void onClick(View view) {
+            
+        }
+    };
+    strBuilder.setSpan(clickable, start, end, flags);
+    strBuilder.removeSpan(span);
+}
+
+protected void setTextViewHTML(TextView text, String html)
+{
+    CharSequence sequence = Html.fromHtml(html);
+    SpannableStringBuilder strBuilder = new SpannableStringBuilder(sequence);
+    URLSpan[] urls = strBuilder.getSpans(0, sequence.length(), URLSpan.class);  
+    for(URLSpan span : urls) {
+        makeLinkClickable(strBuilder, span);
+    }
+    text.setText(strBuilder);
+    text.setMovementMethod(LinkMovementMethod.getInstance());      
+}
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ 最全的 Android 颜色透明度]]></title>
+        <id>https://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/</id>
+        <link href="https://jiesmart.me/post/zui-quan-de-android-yan-se-tou-ming-du/">
+        </link>
+        <updated>2020-08-11T05:21:13.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>好记性不如烂笔头。生活中多做笔记，不仅可以方便自己，还可以方便他人。</p>
+</blockquote>
+<h2 id="背景">背景</h2>
+<p>开发的都知道，UI 微调都是令人头痛的，尤其是颜色的微调。</p>
+<p>如果视觉稿直接给颜色值那倒没啥，可怕的是后面还有标了透明度，而且视觉还原后发现颜色太透明了，要你透明度再调调，这才烦人。我总不能记住 100 个透明度的值吧。</p>
+<p>一次计算，无数次使用，这文章，稳了。</p>
+<h2 id="正文">正文</h2>
+<p>Android 中的颜色值一般格式是：#AARRGGBB。AA 就是透明度值（这里我只聊透明度）。</p>
+<h4 id="1-透明度的计算">1. 透明度的计算</h4>
+<p>透明度分为 256 个等级，即 <strong>0 - 256</strong>，<strong>0</strong> 就是透明，<strong>255</strong> 就是不透明</p>
+<hr>
+<p>透明度 <strong>（透明）0 –&gt; 255（不透明）</strong> 对应着 16 进制 <strong>（透明）00 –&gt; FF（不透明）</strong></p>
+<hr>
+<p>比如：50% 透明度</p>
+<p>50% 也就是 256 的一半即 128，因为是从 0 开始算的，所以是 <strong>127</strong>，转换成 16 进制就是 <strong>7F</strong></p>
+<hr>
+<h3 id="2-献上透明度表格">2. 献上透明度表格</h3>
+<p><strong>注意：我这里写的是透明度值，不是不透明度值，这是两个不同的概念，注意区分。</strong></p>
+<hr>
+<p>需要不透明度值的，可以自己算：透明度值 + 不透明度值 = 100%</p>
+<p>如果你的 UI 设计师给的视觉稿标注是：颜色 #FFFFFF，透明度 40% 。那你的计算方式应该是：</p>
+<ol>
+<li>将透明度转换成不透明度。不透明度为：60%</li>
+<li>不透明度乘以 255。 我们得到结果：153</li>
+<li>将计算结果转换成 16 进制。得到最终的不透明度：99</li>
+<li>将不透明度和颜色值拼接成 ARGB 格式。得到最终的颜色值： #99FFFFFF</li>
+</ol>
+<p>所以，你的 UI 设计师要的颜色是：#99FFFFFF</p>
+<hr>
+<p>下面是我表格里的透明度值的计算方式是：（A：透明度； H：16 进制）</p>
+<p>_<em>255</em>(100% - A%)_* 通过计算器转为 16 进制 <strong>H</strong></p>
+<p>(ps：因为计算结果取整数，所以可能会有一个进制位的误差，比如 50% 的透明度值，上面 “1. 透明度的计算” 中的计算是 127，16 进制为 7F，这里计算是 127.5，四舍五入为 128，16 进制为 80。所以，看到这里不用惊慌，7F 跟 80 肉眼看起来是差不多的，不用去计较)</p>
+<p>00 是完全透明 (百分百透明)，FF 就是完全<strong>不</strong>透明</p>
+<table><thead><tr><th>透明度</th><th>16 进制表示</th></tr></thead><tbody><tr><td>100%</td><td>00</td></tr><tr><td>99 %</td><td>03</td></tr><tr><td>98 %</td><td>05</td></tr><tr><td>97 %</td><td>07</td></tr><tr><td>96 %</td><td>0A</td></tr><tr><td>95 %</td><td>0D</td></tr><tr><td>94 %</td><td>0F</td></tr><tr><td>93 %</td><td>12</td></tr><tr><td>92 %</td><td>14</td></tr><tr><td>91 %</td><td>17</td></tr><tr><td>90 %</td><td>1A</td></tr><tr><td>89 %</td><td>1C</td></tr><tr><td>88 %</td><td>1E</td></tr><tr><td>87 %</td><td>21</td></tr><tr><td>86 %</td><td>24</td></tr><tr><td>85 %</td><td>26</td></tr><tr><td>84 %</td><td>29</td></tr><tr><td>83 %</td><td>2B</td></tr><tr><td>82 %</td><td>2E</td></tr><tr><td>81 %</td><td>30</td></tr><tr><td>80 %</td><td>33</td></tr><tr><td>79 %</td><td>36</td></tr><tr><td>78 %</td><td>38</td></tr><tr><td>77 %</td><td>3B</td></tr><tr><td>76 %</td><td>3D</td></tr><tr><td>75 %</td><td>40</td></tr><tr><td>74 %</td><td>42</td></tr><tr><td>73 %</td><td>45</td></tr><tr><td>72 %</td><td>47</td></tr><tr><td>71 %</td><td>4A</td></tr><tr><td>70 %</td><td>4D</td></tr><tr><td>69 %</td><td>4F</td></tr><tr><td>68 %</td><td>52</td></tr><tr><td>67 %</td><td>54</td></tr><tr><td>66 %</td><td>57</td></tr><tr><td>65 %</td><td>59</td></tr><tr><td>64 %</td><td>5C</td></tr><tr><td>63 %</td><td>5E</td></tr><tr><td>62 %</td><td>61</td></tr><tr><td>61 %</td><td>63</td></tr><tr><td>60 %</td><td>66</td></tr><tr><td>59 %</td><td>69</td></tr><tr><td>58 %</td><td>6B</td></tr><tr><td>57 %</td><td>6E</td></tr><tr><td>56 %</td><td>70</td></tr><tr><td>55 %</td><td>73</td></tr><tr><td>54 %</td><td>75</td></tr><tr><td>53 %</td><td>78</td></tr><tr><td>52 %</td><td>7A</td></tr><tr><td>51 %</td><td>7D</td></tr><tr><td>50 %</td><td>80</td></tr><tr><td>49 %</td><td>82</td></tr><tr><td>48 %</td><td>85</td></tr><tr><td>47 %</td><td>87</td></tr><tr><td>46 %</td><td>8A</td></tr><tr><td>45 %</td><td>8C</td></tr><tr><td>44 %</td><td>8F</td></tr><tr><td>43 %</td><td>91</td></tr><tr><td>42 %</td><td>94</td></tr><tr><td>41 %</td><td>96</td></tr><tr><td>40 %</td><td>99</td></tr><tr><td>39 %</td><td>9C</td></tr><tr><td>38 %</td><td>9E</td></tr><tr><td>37 %</td><td>A1</td></tr><tr><td>36 %</td><td>A3</td></tr><tr><td>35 %</td><td>A6</td></tr><tr><td>34 %</td><td>A8</td></tr><tr><td>33 %</td><td>AB</td></tr><tr><td>32 %</td><td>AD</td></tr><tr><td>31 %</td><td>B0</td></tr><tr><td>30 %</td><td>B3</td></tr><tr><td>29 %</td><td>B5</td></tr><tr><td>28 %</td><td>B8</td></tr><tr><td>27 %</td><td>BA</td></tr><tr><td>26 %</td><td>BD</td></tr><tr><td>25 %</td><td>BF</td></tr><tr><td>24 %</td><td>C2</td></tr><tr><td>23 %</td><td>C4</td></tr><tr><td>22 %</td><td>C7</td></tr><tr><td>21 %</td><td>C9</td></tr><tr><td>20 %</td><td>CC</td></tr><tr><td>19 %</td><td>CF</td></tr><tr><td>18 %</td><td>D1</td></tr><tr><td>17 %</td><td>D4</td></tr><tr><td>16 %</td><td>D6</td></tr><tr><td>15 %</td><td>D9</td></tr><tr><td>14 %</td><td>DB</td></tr><tr><td>13 %</td><td>DE</td></tr><tr><td>12 %</td><td>E0</td></tr><tr><td>11 %</td><td>E3</td></tr><tr><td>10 %</td><td>E6</td></tr><tr><td>9%</td><td>E8</td></tr><tr><td>8%</td><td>EB</td></tr><tr><td>7%</td><td>ED</td></tr><tr><td>6%</td><td>F0</td></tr><tr><td>5%</td><td>F2</td></tr><tr><td>4%</td><td>F5</td></tr><tr><td>3%</td><td>F7</td></tr><tr><td>2%</td><td>FA</td></tr><tr><td>1%</td><td>FC</td></tr><tr><td>0%</td><td>FF</td></tr></tbody></table>
+<h2 id="结尾">结尾</h2>
+<p>东西虽然简单，但还是写出来，就当工具用，下次调 UI 就可以来这里看。如果上面有写错了，欢迎来 “搞”！哈哈！</p>
+<h5 id="参考文章">参考文章</h5>
+<p>本文参考了这位同学的文章<br>
+<a href="http://blog.csdn.net/jabony/article/details/52804296">http://blog.csdn.net/jabony/article/details/52804296</a></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[ git 设置和取消代理]]></title>
+        <id>https://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/</id>
+        <link href="https://jiesmart.me/post/git-she-zhi-he-qu-xiao-dai-li/">
+        </link>
+        <updated>2017-05-09T01:20:12.000Z</updated>
+        <content type="html"><![CDATA[<p>###设置代理</p>
+<pre><code>git config --global http.proxy http://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:1080 
+</code></pre>
+<p>###取消代理</p>
+<pre><code>git config --global --unset http.proxy	
+git config --global --unset https.proxy
+</code></pre>
+]]></content>
+    </entry>
+</feed>

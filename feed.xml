@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Gridea Pro</title>
+    <title>JieDev</title>
     <link>https://home.jiedev.cn/</link>
-    <description>Welcome to Gridea Pro</description>
+    <description>JieDev 的 小站</description>
     <language>zh-cn</language>
     <generator>Gridea Pro</generator>
     <lastBuildDate>Tue, 07 Apr 2026 09:51:52 +0800</lastBuildDate>

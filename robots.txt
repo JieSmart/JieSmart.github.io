@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://home.jiedev.cn/sitemap.xml
